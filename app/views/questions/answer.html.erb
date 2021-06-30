@@ -1,11 +1,27 @@
-<h1>Answer</h1>
+<div class="container d-flex justify-content-center">
 
-<h2> <%= @question %></h2>
-<p>---You</p>
+  <div class="all col-5">
+    <!-- Question -->
+    <div class="row" style="margin-bottom: 32px;">
+      <h2>Q: <%= @question %></h2>
+    </div>
 
+    <!-- Answer -->
+    <div class="d-flex coach-answer justify-content-center">
+      <img src="https://i.redd.it/vygh1ee9jco51.jpg" alt="" style="width: 174px; height:174px; object-fit: cover; margin-right:12px;">
+      <div class="answer">
+        <h2 style="font-size: 20px;">Your coach</h2>
+        <h3 class="bubble"> <%= @answer %></h3>
+      </div>
 
-<%= @answer %>
-<p>---Your coach</p>
+    </div>
 
-<br>
-<%= link_to "Ask new question", ask_path %>
+    <!-- Ask more -->
+    <div class="row">
+      <h2 style="font-size:16px; margin-top:40px;">Satisfied with service? <%= link_to "Ask a new question", ask_path %></h2>
+    </div>
+
+  </div>
+
+</div>
+
